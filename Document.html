@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
+<!-- saved from url=(0057)file:///C:/Users/L/Desktop/0.0/css-selector-practise.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
   <title>Document</title>
   <style>
     /* YOUR STYLE GOES HERE */
@@ -11,15 +10,15 @@
       color: red;
     }
 
-    a[tabindex="-1"]:focus {
+    p.a:focus {
       color: blue;
     }
 
-    a[tabindex="-1"]:hover {
+    p.a:hover {
       color: red;
     }
 
-    a[tabindex="-1"]:active {
+    p.a:active {
       color: green;
     }
 
@@ -35,23 +34,23 @@
       color: red;
     }
 
-    a:link {
+    :link {
       color: pink;
     }
 
-    a:visited {
+    :visited {
       color: orange;
     }
 
-    a[href^="mailto:"i] {
+    [href^="mailto"i] {
       color: blue;
     }
 
-    a[href^="tel:"i] {
+    [href^="tel"] {
       color: yellow;
     }
 
-    a[href$="pdf"i] {
+    [href$="pdf"i] {
       font-size: 30px;
     }
 
@@ -63,7 +62,7 @@
       color: red;
     }
 
-    div.b>ul li:nth-child(-n+25) {
+    div.b>ul li:nth-last-child(n+76) {
       color: red;
     }
 
@@ -80,9 +79,9 @@
     }
 
     div.prime>ul li:nth-child(2n+4),
-    div.prime>ul li:nth-child(3n+9),
-    div.prime>ul li:nth-child(5n+25),
-    div.prime>ul li:nth-child(7n+49) {
+    div.prime>ul li:nth-child(3n+6),
+    div.prime>ul li:nth-child(5n+10),
+    div.prime>ul li:nth-child(7n+14) {
       color: red;
     }
   </style>
@@ -113,12 +112,12 @@
     <a href="https://www.mi.com/">mi</a>
     <a href="https://www.jd.com/">jd</a>
     <a href="https://www.lksdjfwief.com/">你肯定没访问过我</a>
-    <a href="MAILTO:a@b.com">给我发邮件</a>
+    <a href="mailto:a@b.com">给我发邮件</a>
     <a href="mailto:a@b.com">给我发邮件</a>
     <a href="tel:12345678">给我打电话</a>
     <a href="tel:12345678">给我打电话</a>
-    <a href="aaa.pdf">下载pdf</a>
-    <a href="aaa.PDF">下载pdf</a>
+    <a href="file:///C:/Users/L/Desktop/0.0/aaa.pdf">下载pdf</a>
+    <a href="file:///C:/Users/L/Desktop/0.0/aaa.PDF">下载pdf</a>
   </div>
 
   <div class="a">
@@ -256,7 +255,7 @@
 
   <div class="prime">
     <p>让所有的质/素数(prime)（2，3，5，7，11，13……）跟合数（4，6，8，9，10……）为不同的颜色</p>
-
+    nth-child(3n)
     <ul>
       <li>01</li>
       <li>02</li>
@@ -360,6 +359,7 @@
       <li>100</li>
     </ul>
   </div>
-</body>
 
-</html>
+
+
+</body></html>
