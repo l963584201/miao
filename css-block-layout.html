@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>css-block-layout</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .p1 {
+      width: 600px;
+      margin: auto;
+    }
+
+    .box {
+      width: 174px;
+      height: 34px;
+      border: 3px solid;
+      margin-top: 15px;
+      text-align: center;
+      line-height: 34px;
+      background-color: pink;
+    }
+
+    .box:hover {
+      background-color: red;
+    }
+
+    #a {
+      width: 600px;
+      margin: auto;
+      margin-bottom: 16px;
+    }
+
+    .box:nth-child(n+5):nth-last-child(n+5) {
+      margin-left: 210px;
+      margin-top: 15px;
+    }
+
+    .box:nth-child(n+9) {
+      margin-left: 420px;
+      margin-top: 15px
+    }
+
+    .box:nth-child(4) {
+      margin-bottom: -220px;
+    }
+
+    .box:nth-child(8) {
+      margin-bottom: -220px;
+    }
+
+    .b {
+      border: 1px dotted transparent;
+      border-bottom-color: black;
+      width: 598px;
+      margin: 0 auto;
+    }
+
+    .h {
+      border-bottom-color: transparent;
+    }
+
+    p#w {
+      margin-top: 16px;
+      background-color: rgb(238, 138, 238);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <p class="p1">hello world 请调整浏览器窗口大小查看效果</p>
+  </header>
+  <p class="p1">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+    页面主体 宽度600px页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+    页面主体 宽度600px</p>
+  <div id="a">
+    <div class="box">宽180高40(包含边框)</div>
+    <div class="box">水平间隙30px</div>
+    <div class="box">垂直间隙15px</div>
+    <div class="box">边框宽度3px</div>
+    <div class="box">产品</div>
+    <div class="box">产品</div>
+    <div class="box">产品</div>
+    <div class="box">产品</div>
+    <div class="box">产品</div>
+    <div class="box">产品</div>
+    <div class="box">产品</div>
+    <div class="box">产品</div>
+  </div>
+  <p class="b">link</p>
+  <p class="b">link</p>
+  <p class="b">link</p>
+  <p class="b">link</p>
+  <p class="b h">link</p>
+  <p class="d" id="w">&copy;版权所有<br>本页所有布局均使用块元素</p>
+</body>
+
+</html>
