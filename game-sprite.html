@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		div.a {
+			border: 3px solid black;
+			width: 100px;
+			height: 100px;
+			transition-property: height, width;
+			transition-duration: 2s, 4s;
+			transition-timing-function: linear, ease;
+			transition-delay: 0s, 2s;
+			position: absolute;
+		}
+
+		div.a:hover {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			transition-property: width, height;
+			transition-duration: 2s, 4s;
+			transition-timing-function: linear, ease;
+			transition-delay: 0s, 2s;
+		}
+
+		div.b {
+			border: 3px solid black;
+			margin-top: 300px;
+			width: 627px;
+			height: 389px;
+			background-image: url(game.png);
+			background-repeat: no-repeat;
+			background-position: -18px -170px;
+			height: 110px;
+			width: 58px;
+			transition-duration: 1s;
+			transition-timing-function: steps(8);
+		}
+
+		div.b:hover {
+			background-position: -76px -177px;
+			background-position: -134px -177px;
+			background-position: -199px -177px;
+			background-position: -262px -177px;
+			background-position: -320px -177px;
+			background-position: -378px -177px;
+			background-position: -435px -177px;
+			background-position: -493px -177px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="a"></div>
+	<br>
+	<div class="b">
+	</div>
+</body>
+
+</html>
