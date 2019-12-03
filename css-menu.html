@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		* {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			color: white;
+		}
+
+		ul li {
+			position: relative;
+			white-space: nowrap;
+			background-color: rgba(60, 60, 60);
+		}
+
+		ul.menu>li {
+			display: inline-block;
+			padding: 10px;
+		}
+
+		ul.menu ul li {
+			padding: 10px 20px;
+		}
+
+		ul.menu li :hover {
+			background-color: #094771;
+		}
+
+		ul ul {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+		}
+
+		ul ul ul {
+			top: 0;
+			left: 100%;
+		}
+
+		li:hover>ul {
+			display: block;
+		}
+
+		.a {
+			border-bottom: 1px solid;
+		}
+
+	</style>
+</head>
+
+<body>
+	<ul class="menu">
+		<li>文件</li>
+		<li>编辑</li>
+		<li>选择</li>
+		<li>查看
+			<ul>
+				<li>命令面板</li>
+				<li class="a">打开视图</li>
+				<li>外观
+					<ul>
+						<li>全屏</li>
+						<li>禅模式</li>
+						<li>居中布局</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+</body>
+
+</html>
