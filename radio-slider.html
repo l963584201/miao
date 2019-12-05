@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		div {
+			width: 280px;
+			height: 175px;
+			border: 5px solid;
+			position: relative;
+			overflow: hidden;
+		}
+
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: .3s;
+			opacity: 0;
+		}
+
+		input {
+			margin-top: 160px;
+			position: relative;
+			z-index: 10;
+		}
+
+		input:checked+*+*+*+img {
+			left: 0;
+			opacity: 1;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div>
+		<input type="radio" name="dio" checked id="">
+
+		<input type="radio" name="dio" id="">
+
+		<input type="radio" name="dio" id="">
+
+		<input type="radio" name="dio" id="">
+		<img src="1.jpg" alt="">
+		<img src="2.jpg" alt="">
+		<img src="3.jpg" alt="">
+		<img src="4.jpg" alt="">
+	</div>
+</body>
+
+</html>
