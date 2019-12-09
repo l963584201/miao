@@ -2,31 +2,75 @@
 <html lang="en">
 
 <head>
-	<meta charset="class=" qw" UTF-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<style>
-		input {
-			display: none;
+		table {
+			border-spacing: 0;
+			border-collapse: collapse;
+			margin-top: 180px;
 		}
 
-		label {
-			display: inline-block;
+		td {
 			width: 50px;
 			height: 50px;
-			border: 3px solid blue;
-			position: relative;
-			margin-right: -5px;
-		}
-
-		label.qw {
 			text-align: center;
 		}
 
-		label:hover {
-			border-color: red;
-			box-shadow: 0 0 0 3px red;
+		tr {
+			border: 5px solid blue;
+		}
+
+		col {
+			border: 5px solid blue;
+		}
+
+		td:hover {
+			border: 5px solid red;
+		}
+
+		ul.b {
+			list-style-type: none;
+			padding: 0;
+			width: 170px;
+		}
+
+		.b li {
+			width: 50px;
+			height: 50px;
+			border: 5px solid blue;
+			float: left;
+			margin-bottom: -5px;
+			margin-right: -5px;
+			position: relative;
+			text-align: center;
+		}
+
+		.b li:hover {
+			border: 5px solid red;
+			z-index: 10;
+		}
+
+		.a {
+			width: 180px;
+			display: inline-block;
+			list-style-type: none;
+			padding: 0;
+		}
+
+		.a li a {
+			border: 5px solid blue;
+			width: 50px;
+			height: 50px;
+			position: relative;
+			float: left;
+			margin: 0 -5px -5px 0;
+		}
+
+		li a:hover {
+			border: 5px solid red;
 			z-index: 10;
 		}
 
@@ -34,17 +78,52 @@
 </head>
 
 <body>
-	<div>
-		<input type="radio" name="q" id="a1"><label class="qw" for="a1">1</label>
-		<input type="radio" name="q" id="a2"><label class="qw" for="a2">2</label>
-		<input type="radio" name="q" id="a3"><label class="qw" for="a3">3</label><br>
-		<input type="radio" name="q" id="a4"><label class="qw" for="a4">4</label>
-		<input type="radio" name="q" id="a5"><label class="qw" for="a5">5</label>
-		<input type="radio" name="q" id="a6"><label class="qw" for="a6">6</label><br>
-		<input type="radio" name="q" id="a7"><label class="qw" for="a7">7</label>
-		<input type="radio" name="q" id="a8"><label class="qw" for="a8">8</label>
-		<input type="radio" name="q" id="a9"><label class="qw" for="a9">9</label>
-	</div>
+	<ul class="a">
+		<li><a href="">1</a></li>
+		<li><a href="">2</a></li>
+		<li><a href="">3</a></li>
+		<li><a href="">4</a></li>
+		<li><a href="">5</a></li>
+		<li><a href="">6</a></li>
+		<li><a href="">7</a></li>
+		<li><a href="">8</a></li>
+		<li><a href="">9</a></li>
+	</ul>
+	<br>
+	<ul class="b">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+	</ul>
+	<br>
+	<table>
+		<col>
+		<col>
+		<col>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 
 </html>

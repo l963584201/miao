@@ -13,6 +13,11 @@
 			border: 5px solid;
 			position: relative;
 			overflow: hidden;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
 		}
 
 		img {
@@ -34,22 +39,66 @@
 			opacity: 1;
 		}
 
+		div.left {
+			width: 15px;
+			height: 20px;
+			border: 2px solid red;
+			position: relative;
+			margin-top: -110px;
+			left: -130px;
+			background-position: 0 0;
+		}
+
+		div.left label::before {
+			content: '<';
+			color: red;
+		}
+
+		div.right {
+			width: 15px;
+			height: 20px;
+			border: 2px solid blue;
+			position: relative;
+			margin-top: -22px;
+			margin-left: 1080px;
+			background-position: 0 0;
+		}
+
+		div.right label::before {
+			content: '>';
+			color: blue;
+		}
+
+		div.left,
+		div.right :active {
+			background-position: -15px 0;
+		}
+
 	</style>
 </head>
 
 <body>
 	<div>
-		<input type="radio" name="dio" checked id="">
-
-		<input type="radio" name="dio" id="">
-
-		<input type="radio" name="dio" id="">
-
-		<input type="radio" name="dio" id="">
+		<input type="radio" name="dio" checked id="one">
+		<input type="radio" name="dio" id="two">
+		<input type="radio" name="dio" id="three">
+		<input type="radio" name="dio" id="four">
 		<img src="1.jpg" alt="">
 		<img src="2.jpg" alt="">
 		<img src="3.jpg" alt="">
 		<img src="4.jpg" alt="">
+	</div>
+	<div class="left">
+		<label for="four"></label>
+		<label for="three"></label>
+		<label for="two"></label>
+		<label for="one"></label>
+	</div>
+	<div class="right">
+		<label for="two"></label>
+		<label for="one"></label>
+		<label for="four"></label>
+		<label for="three"></label>
 	</div>
 </body>
 
