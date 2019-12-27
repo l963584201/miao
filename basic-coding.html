@@ -1,0 +1,60 @@
+<script id="ch0103/01">
+	var a = Number(prompt("a + b a b是整数,pick a","")),b = Number(prompt("pick b",""));
+	console.log(a + b);
+</script>
+<script id="ch0103/02">
+	var a = Number(prompt("(a + b) * c (－10,000 < a,b,c < 10,000) a b c是整数,pick a","")),b = Number(prompt("pick b","")),c = Number(prompt("pick c",""));
+	console.log((a + b) * c);
+</script>
+<script id="ch0103/03">
+	var a = Number(prompt("(a + b) / c (－10,000 < a,b,c < 10,000, c不等于0) a b c是整数,pick a","")),b = Number(prompt("pick b","")),c = Number(prompt("pick c",""));
+	console.log((a + b) / c);
+</script>
+<script id="ch0103/04">
+	var a = Number(prompt("a / b (b不等于0) pick a","")),b = Number(prompt(" pick b",""));
+	console.log("商数是" + (a / b).toFixed(0));
+	console.log("余数是" + (a % b));
+</script>
+<script id="ch0103/05">
+	var a = Number(prompt("求a/b 的浮点数值","")),b = Number(prompt(" pick b",""));
+	console.log((a / b).toFixed(9));
+</script>
+<script id="ch0103/06">
+	var a = Number(prompt("确诊数","")),b = Number(prompt("死亡数",""));
+	console.log((b / a * 100).toFixed(3) + "%");
+</script>
+<script id="ch0103/07">
+	var x = Number(prompt("f(x) = ax^3 + bx^2 + cx + d (每个数都是绝对值不超过100的双精度浮点数), x=","")),a = Number(prompt("a=","")),b = Number(prompt("b=","")),c = Number(prompt("c=","")),d = Number(prompt("d=",""));
+	console.log("f(x)=" + (a * (Math.pow(x,3)) + (b * Math.pow(x,2)) + c * x + d));
+</script>
+<script id="ch0103/08">
+	var F = Number(prompt("C= 5 * (F - 32) / 9 （f >= -459.67） F=",""));
+	console.log("C=" + (5 * (F - 32) / 9).toFixed(3));
+</script>
+<script id="ch0103/09">
+	var R = Number(prompt("R=",""));
+	console.log("直径=" + (2 * R).toFixed(4));
+	console.log("周长=" + (2 * (Math.PI).toFixed(2) * R).toFixed(4));
+	console.log("面积=" + ((Math.PI).toFixed(2) * Math.pow(R,2)).toFixed(4));
+</script>
+<script id="ch0103/10">
+	var r1 = Number(prompt("R = 1/(1/r1 + 1/r2) r1=","")),r2 = Number(prompt("r2=",""));
+	console.log("R=" + (1 / (1 / r1 + 1 / r2)).toFixed(2));
+</script>
+<script id="ch0103/11">
+	var a = Number(prompt("计算a和b的相除的余数  a=","")),b = Number(prompt("b=",""));
+	console.log("余数=" + (a % b).toFixed(4));
+</script>
+<script id="ch0103/12">
+	var r = Number(prompt("V=4/3*πr3 (0<r<100) r=",""));
+	console.log("V=" + (4 / 3 * (((Math.PI).toFixed(2)) * (Math.pow(r,3)))).toFixed(2));
+</script>
+<script id="ch0103/13">
+	var n = Number(prompt("输入n,n=",""));
+	console.log(n % 10);
+	console.log((n % 100 - (n % 10)) / 10);
+	console.log((n - (n % 100)) / 100);
+</script>
+<script id="ch0103/14">
+
+</script>

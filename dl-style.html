@@ -3,30 +3,35 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<style>
 		dl {
-			width: 350px;
-			display: inline-block;
+			padding-left: 55px;
+			width: 300px;
+			border: 1px solid red;
 		}
 
 		dt {
-			height: 50px;
 			width: 50px;
-			border: 3px solid red;
-			float: left;
-			margin-bottom: 50px;
-			margin-right: 20px;
+			text-align: right;
+			margin-left: -50px;
+			height: 0;
+		}
+
+		dt::after {
+			content: ':';
 		}
 
 		dd {
-			height: 50px;
 			width: 50px;
-			border: 3px solid blue;
+			margin-left: 0;
 			display: inline-block;
-			margin: 0;
+		}
+
+		dd::after {
+			content: ',';
 		}
 
 	</style>
@@ -35,24 +40,24 @@
 <body>
 	<div>
 		<dl>
-			<dt>
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>s
+			<dt>asd
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
 			</dt>
-			<dt>
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>,
-			<dd></dd>
+			<dt>asd
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
+			<dd>jqjqjq</dd>
 			</dt>
 		</dl>
 	</div>
