@@ -33,13 +33,11 @@
 </script>
 <script id="ch0103/08">
 	var F = Number(prompt("F=",""));
-	console.log("C=" + (5 * (F - 32) / 9).toFixed(3));
+	console.log("C=" + (5 * (F - 32) / 9).toFixed(5));
 </script>
 <script id="ch0103/09">
 	var R = Number(prompt("R=",""));
-	console.log("直径=" + (2 * R).toFixed(4));
-	console.log("周长=" + (2 * (Math.PI).toFixed(2) * R).toFixed(4));
-	console.log("面积=" + ((Math.PI).toFixed(2) * Math.pow(R,2)).toFixed(4));
+	console.log((2 * R).toFixed(4) + "" + (2 * (Math.PI).toFixed(2) * R).toFixed(4) + "" + ((Math.PI).toFixed(2) * Math.pow(R,2)).toFixed(4));
 </script>
 <script id="ch0103/10">
 	var r1 = Number(prompt("r1=","")),r2 = Number(prompt("r2=",""));
