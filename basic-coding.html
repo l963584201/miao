@@ -5,12 +5,14 @@
 </script>
 <script id="ch0103/02">
 	var a = Number(prompt("pick a","")),
-		b = Number(prompt("pick b","")),c = Number(prompt("pick c",""));
+		b = Number(prompt("pick b","")),
+		c = Number(prompt("pick c",""));
 	console.log((a + b) * c);
 </script>
 <script id="ch0103/03">
 	var a = Number(prompt(",pick a","")),
-		b = Number(prompt("pick b","")),c = Number(prompt("pick c",""));
+		b = Number(prompt("pick b","")),
+		c = Number(prompt("pick c",""));
 	console.log(a + b < c ? 0 : (Math.trunc(a + b) / c));
 </script>
 <script id="ch0103/04">
@@ -20,15 +22,21 @@
 	console.log((a % b));
 </script>
 <script id="ch0103/05">
-	var a = Number(prompt("a=","")),b = Number(prompt(" pick b",""));
+	var a = Number(prompt("a=","")),
+		b = Number(prompt(" pick b",""));
 	console.log((a / b).toFixed(9));
 </script>
 <script id="ch0103/06">
-	var a = Number(prompt("确诊数","")),b = Number(prompt("死亡数",""));
+	var a = Number(prompt("确诊数","")),
+		b = Number(prompt("死亡数",""));
 	console.log((b / a * 100).toFixed(3) + "%");
 </script>
 <script id="ch0103/07">
-	var x = Number(prompt("x=","")),a = Number(prompt("a=","")),b = Number(prompt("b=","")),c = Number(prompt("c=","")),d = Number(prompt("d=",""));
+	var x = Number(prompt("x=","")),
+		a = Number(prompt("a=","")),
+		b = Number(prompt("b=","")),
+		c = Number(prompt("c=","")),
+		d = Number(prompt("d=",""));
 	console.log(Number(a * x ** 3 + b * x ** 2 + c * x + d).toFixed(7));
 </script>
 <script id="ch0103/08">
@@ -37,14 +45,16 @@
 </script>
 <script id="ch0103/09">
 	var R = Number(prompt("R=",""));
-	console.log((2 * R).toFixed(4) + "" + (2 * R * 3.14159).toFixed(4) + "" + (3.14159 * Math.pow(R,2)).toFixed(4));
+	console.log((2 * R).toFixed(4) + "" + (2 * 3.14159 * R).toFixed(4) + "" + (3.14159 * R ** 2).toFixed(4));
 </script>
 <script id="ch0103/10">
-	var r1 = Number(prompt("r1=","")),r2 = Number(prompt("r2=",""));
+	var r1 = Number(prompt("r1=","")),
+		r2 = Number(prompt("r2=",""));
 	console.log(Number(1 / (1 / r1 + 1 / r2)).toFixed(2));
 </script>
 <script id="ch0103/11">
-	var a = Number(prompt("a=","")),b = Number(prompt("b=",""));
+	var a = Number(prompt("a=","")),
+		b = Number(prompt("b=",""));
 	console.log((a % b).toFixed(4));
 </script>
 <script id="ch0103/12">
@@ -56,5 +66,44 @@
 	console.log(n % 10 + "" + (n % 100 - (n % 10)) / 10 + "" + (n - (n % 100)) / 100);
 </script>
 <script id="ch0103/14">
-
+	var r = Number(prompt("r=","")),
+		h = Number(prompt("h=",""));
+	console.log(Math.ceil(2e4 / (3.14159 * r ** 2 * h)));
+</script>
+<script id="ch0103/15">
+	var n = Number(prompt("n=","")),
+		x = Number(prompt("x=","")),
+		y = Number(prompt("y=",""));
+	console.log(n - Math.ceil(y / x));
+</script>
+<script id="ch0103/16">
+	var ax = Number(prompt("ax=","")),
+		ay = Number(prompt("ay=","")),
+		bx = Number(prompt("bx=","")),
+		by = Number(prompt("by=",""));
+	console.log((Math.sqrt((ax - bx) ** 2 + (ay - by) ** 2)).toFixed(3));
+</script>
+<script id="ch0103/17">
+	var x1 = Number(prompt("x1=","")),
+		y1 = Number(prompt("y1=","")),
+		x2 = Number(prompt("x2=","")),
+		y2 = Number(prompt("y2=","")),
+		x3 = Number(prompt("x3=","")),
+		y3 = Number(prompt("y3=",""));
+	console.log((((x2 - x1) * (y3 - y1) + (x3 - x1) * (y2 - y1)) * 0.5).toFixed(2));
+</script>
+<script id="ch0103/18">
+	var a1 = Number(prompt("a1=","")),
+		a2 = Number(prompt("a2=","")),
+		n = Number(prompt("n=",""));
+	console.log(a1 + (n - 1) * (a2 - a1));
+</script>
+<script id="ch0103/19">
+	var a = Number(prompt("pick a","")),
+		b = Number(prompt("pick b",""));
+	console.log(a * b);
+</script>
+<script id="ch0103/19">
+	var n = Number(prompt("pick n",""));
+	console.log(Math.pow(2,n));
 </script>
