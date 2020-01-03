@@ -112,12 +112,10 @@
 	if (n > 0)
 	{
 		console.log("positive");
-	}
-	else if (n = 0)
+	} else if (n = 0)
 	{
 		console.log("zero");
-	}
-	else
+	} else
 	{
 		console.log("negative");
 	}
@@ -341,8 +339,7 @@
 	} else if (c == '/')
 	{
 		console.log(a / b);
-	}
-	else
+	} else
 	{
 		console.log('Invalid operator!');
 	}
@@ -622,21 +619,27 @@
 		sum += 2 * h
 		h /= 2
 	}
-	console.log(sum-t,h)
+	console.log((sum - t).toFixed(4),h.toFixed(7))
 </script>
 <script id="ch0105/21">
 	var n = +prompt("N")
 	var t
-	while (n!=1) {
-if (n%2!=0){
-	t=n*3+1
-	n=t
-	console.log(n+'*3+1='+t)
-}else if (n%2==0){
-	t=n/2
-	n=t
-	console.log(n+'/2='+t)
-}
+	while (n != 1)
+	{
+		if (n % 2 == 1)
+		{
+			t = n * 3 + 1
+			console.log(n + '*3+1=' + t)
+			n = t
+		} else
+		{
+			t = n / 2
+			console.log(n + '/2=' + t)
+			n = t
+		}
 	}
 	console.log('End')
+</script>
+<script id="ch0105/22">
+
 </script>
