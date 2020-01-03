@@ -641,5 +641,44 @@
 	console.log('End')
 </script>
 <script id="ch0105/22">
-
+	var rest = 0
+	var stock = 0
+	var flag = false
+	for (var i = 1; i <= 12; i++)
+	{
+		rest += 300
+		var budget = +prompt()
+		if (budget > rest)
+		{
+			console.log(-i)
+			flag = true
+			break
+		}
+		rest = rest - budget
+		if (rest > 100)
+		{
+			var t = Math.floor(rest / 100) * 100
+			stock += t
+			rest = rest - t
+		}
+	} if (!flag)
+	{
+		console.log(Math.trunc(rest + stock * 1.2))
+	}
+</script>
+<script id="ch0105/23">
+	var m = +prompt("m")
+	var n = +prompt("n")
+	var y = 0
+	for (var i = 0; i < n; i++)
+	{
+		var x = +prompt("x")
+		if (x < m)
+		{
+			m = m - x
+		} else {
+			y++
+		}
+	}
+	console.log(y)
 </script>
