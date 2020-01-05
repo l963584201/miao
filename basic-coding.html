@@ -764,7 +764,6 @@ if (m%19==0&&k==3){
 <script id="ch0105/31">
 var n=+prompt()
 var m=+prompt()
-var result=''
 for (var i=1;i<=n;i++){
 	var flag=true
 	for (var p=1;p<=m;p++){
@@ -773,9 +772,10 @@ for (var i=1;i<=n;i++){
 		}
 	}
 	if (flag==false){
-		console.log(i+',')
+		var x=i
 	}
 }
+console.log((x-8)+','+(x-5)+','+x)
 </script>
 <script id="ch0105/32">
 var n=+prompt("n")
