@@ -900,14 +900,23 @@ console.log(y)
 <script id="ch0105/42">
 var width=+prompt("width")
 var height=+prompt("height")
-var line =+prompt("line")
+var aline =+prompt("line")
 var x=+prompt("x")
-	for (var i = width; i <= height; i++)	{
-		if (x==0) {
-		console.log(line)
-		line += ''
+aline=''
+line=''
+for (var i=1;i<=width;i++){
+	aline+='@'
+	if (i>1){
+		line+=' '
 	}
+}
+var result=''
+for (var i=1;i<2*height;i++){
+	if (i%2==1){
+		result+=aline+'\n'
 	}
+}
+console.log(result)
 </script>
 <script id="ch0105/43">
 	var n=+prompt("n")
