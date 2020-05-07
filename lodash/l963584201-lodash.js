@@ -30,15 +30,12 @@ var l963584201 = {
 		{
 			return array.filter(x => x>0)
 	},
-	concat: function (array, values)
+	concat: function (array, ...values)
 	{
-		return array.concat(values)
+		return array.concat(...values)
 	},
-	difference(array,[values])
+	difference: function(array,[values])
 	{
-		for (let i = 0; i < array.length; i++)
-		{
-			if
-		}
+
 	}
 }
