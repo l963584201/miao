@@ -33,9 +33,6 @@ var l963584201 = {
 	concat: function (array, ...values)
 	{
 		return array.concat(...values)
-	},
-	difference: function(array,[values])
-	{
-
 	}
+
 }
