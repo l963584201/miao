@@ -14,9 +14,31 @@ var l963584201 = {
 		if (val !== val)
 		{
 			return true
-		} else
-		{
+		} else{
 			return false
+		}
+	},
+	chunk: function (ary,size = 1){
+		var arys = []
+		var aryss = []
+		arys.push(ary.slice(0,size))
+		arys.push(ary.slice(size,ary.length))
+		aryss.push(arys)
+		return aryss
+	},
+		compact: function (array)
+		{
+			return array.filter(x => x>0)
+	},
+	concat: function (array, values)
+	{
+		return array.concat(values)
+	},
+	difference(array,[values])
+	{
+		for (let i = 0; i < array.length; i++)
+		{
+			if
 		}
 	}
 }
