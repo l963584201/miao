@@ -20,11 +20,9 @@ var l963584201 = {
 	},
 	chunk: function (ary,size = 1){
 		var arys = []
-		var aryss = []
 		arys.push(ary.slice(0,size))
 		arys.push(ary.slice(size,ary.length))
-		aryss.push(arys)
-		return aryss
+		return arys
 	},
 		compact: function (array)
 		{
