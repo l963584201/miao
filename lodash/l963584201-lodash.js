@@ -31,6 +31,34 @@ var l963584201 = {
 	concat: function (array, ...values)
 	{
 		return array.concat(...values)
-	}
+	},
+	difference: function (array,...values)
+	{
+		let arrays = []
+		for (let x of values)
+		{
+			arrays = arrays.concat(x)
+		}
+		return array.filter((x) => !arrays.includes(x))
+	},
+	drop: function (array, n=1)
+	{
+		for (let i = 1; i <= n; i++)
+		{
+			array.shift()
+		}
+		return array
+	},
+	fill: function (array,value,start = 0,end = array.length)
+	{
+		for (let i = start; i < end; i++)
+		{
+			array[i] = value
+		}
+		return array
+	},
+	find: function (collection,predicate = _.identity,fromIndex = 0)
+	{
 
+	}
 }
