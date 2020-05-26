@@ -24,7 +24,7 @@ var l963584201 = {
 		arys.push(ary.slice(size,ary.length))
 		return arys
 	},
-		compact: function (array)
+	compact: function (array)
 		{
 			return array.filter(x => x>0)
 	},
@@ -57,8 +57,59 @@ var l963584201 = {
 		}
 		return array
 	},
-	find: function (collection,predicate = _.identity,fromIndex = 0)
+	dropRight: function (array,n = 1)
 	{
-
+		if (n >= array.length)
+		{
+			return []
+		} else if (n = 0)
+		{
+			return array
+		}
+		else
+		{
+			for (i = 0; i < n; i++)
+			{
+				array.pop()
+			}
+			return array
+		}
+	},
+	flatten: function (array)
+	{
+		let arr = []
+		let arrs = []
+		for (let i = 0; i < array.length; i++)
+		{
+			if (Array.isArray(array[i]))
+			{
+				arrs = array[i]
+				for (let j = 0; j < arrs.length; j++)
+				{
+					arr.push(arrs[j])
+				}
+			} else
+			{
+				arr.push(array[i])
+			}
+		}
+		return arr
+	},
+	flattenDeep: function (array)
+	{
+		let arr = []
+		let arrs = []
+		for (let item of array)
+		{
+			if (Array.isArray(item))
+			{
+				let flattenitem = flattenDeep(item)
+				arr.push(...item)
+			} else
+			{
+				arr.push(item)
+			}
+		}
+		return arr
 	}
 }
