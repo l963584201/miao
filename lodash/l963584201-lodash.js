@@ -59,20 +59,19 @@ var l963584201 = {
 	},
 	dropRight: function (array,n = 1)
 	{
-		if (n >= array.length)
-		{
-			return []
+		if (n <= array.length)
+		{for (i = 0; i < n; i++)
+			{
+				array.pop()
+		}
+			return array
 		} else if (n = 0)
 		{
 			return array
 		}
 		else
 		{
-			for (i = 0; i < n; i++)
-			{
-				array.pop()
-			}
-			return array
+			return []
 		}
 	},
 	flatten: function (array)
@@ -97,19 +96,6 @@ var l963584201 = {
 	},
 	flattenDeep: function (array)
 	{
-		let arr = []
-		let arrs = []
-		for (let item of array)
-		{
-			if (Array.isArray(item))
-			{
-				let flattenitem = flattenDeep(item)
-				arr.push(...item)
-			} else
-			{
-				arr.push(item)
-			}
-		}
-		return arr
+
 	}
 }
