@@ -103,24 +103,29 @@ var l963584201 = {
 		}
 		return array
 	},
-	keyBy: function(collection, iteratee){
-		var result = {}
-		if ( typeof by == 'function'){
-			var key = f(item)
+	flattenDepth: function(array, depth) {
+		for (var i = 0;i < depth;i++){
+			if (Array.isArray(array[i])){
+				array = this.flatten(array)
+				this.flattenDeep(array)
+			}
 		}
-		collection.forEach(item => {
-			result[item[iteratee]] = item
-		})
-		return result
+		return array
+	},
+	keyBy: 	function(collection,iteratee){
+		return collection.reduce((obj,item) =>{
+			obj[item[iteratee]] = item
+			return obj
+		},{})
 	},
 	groupBy: function(collection, iteratee){
 		var result = {}
-		ary.forEach(item =>{
-			var key = f(item)
-			if (!(key in result)){
-				result[key] = []
+		collection.forEach(item =>{
+			iteratee = f(item)
+			if (!(iteratee in result)){
+				result[iteratee] = []
 			}
-			result[key].push(item)
+			result[iteratee].push(item)
 		})
 		return result
 	}
