@@ -96,11 +96,12 @@ var l963584201 = {
 	},
 	flattenDeep: function (array){
 		var result = []
-		array.forEach(item => {
-			if (Array.isArray(array[i])){
-				array[i] = item
+		array.flatten( item => {
+			if (!(Array.isArray(array[i]))){
+				result.push(array[i])
+			} else {
+				result.push(item[array[i]])
 			}
-			result.push(array[i])
 		})
 		return result
 	},
