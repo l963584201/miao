@@ -116,7 +116,11 @@ var l963584201 = {
 	},
 	keyBy: 	function(collection,iteratee){
 		return collection.reduce((obj,item) =>{
-			obj[item[iteratee]] = item
+			if ( typeof iteratee == 'function'){
+				obj[iteratee(item)] = item
+		 }else {
+			 	obj[item[iteratee]] = item
+		 }
 			return obj
 		},{})
 	},
