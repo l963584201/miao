@@ -104,10 +104,12 @@ var l963584201 = {
 		return array
 	},
 	flattenDepth: function(array, depth) {
-		for (var i = 0;i < depth;i++){
+		for (var i in array){
 			if (Array.isArray(array[i])){
+				for (var j = 1;j <= depth;j++){
 				array = this.flatten(array)
 				this.flattenDeep(array)
+				}
 			}
 		}
 		return array
@@ -118,14 +120,19 @@ var l963584201 = {
 			return obj
 		},{})
 	},
-	groupBy: function(collection, iteratee){
+	groupBy: function(collection,iteratee){
 		var result = {}
 		collection.forEach(item =>{
-			iteratee = f(item)
-			if (!(iteratee in result)){
-				result[iteratee] = []
+			var key
+			if (typeof iteratee == 'string'){
+				 key = item[iteratee]
+			} else if ( typeof iteratee == 'function'){
+				 key = iteratee(item)
 			}
-			result[iteratee].push(item)
+			if (!(key in result)){
+				result[key] = []
+			}
+			result[key].push(item)
 		})
 		return result
 	}
