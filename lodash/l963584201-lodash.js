@@ -74,21 +74,16 @@ var l963584201 = {
 			return []
 		}
 	},
-	flatten: function (array)
-	{
+	flatten: function (array){
 		let arr = []
 		let arrs = []
-		for (let i = 0; i < array.length; i++)
-		{
-			if (Array.isArray(array[i]))
-			{
+		for (let i = 0; i < array.length; i++){
+			if (Array.isArray(array[i])){
 				arrs = array[i]
-				for (let j = 0; j < arrs.length; j++)
-				{
+				for (let j = 0; j < arrs.length; j++){
 					arr.push(arrs[j])
 				}
-			} else
-			{
+			} else{
 				arr.push(array[i])
 			}
 		}
@@ -139,5 +134,17 @@ var l963584201 = {
 			result[key].push(item)
 		})
 		return result
+	},
+	fromPairs: function(pairs){
+		var result = {}
+		for (var i of pairs) {
+			result[i[0]] = i[1]
+		}
+		return result
+	},
+	head: function(array){
+		for (var i = 0;i <array.length;i++){
+			return array[0]
+		}
 	}
 }
