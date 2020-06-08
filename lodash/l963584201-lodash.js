@@ -203,7 +203,7 @@ var l963584201 = {
 	},
 	intersection: function(...arrays) {
 		var result = arrays[0]
-		for (var i of arrays){
+		for (var i = 0;i < arrays.length;i++){
 			result = result.filter(val => arrays[i].includes(val))
 			}
 		return result
@@ -225,6 +225,8 @@ var l963584201 = {
 		for (var i = fromIndex;i < array.length;i++) {
 			if (array[i] === value) {
 				return i
+			} else {
+				return -1
 			}
 		}
 	},
@@ -250,5 +252,28 @@ var l963584201 = {
 				}
 			}
 		return result
+	},
+	pullAll: function(array, values){
+		var result = []
+		for (var i of array) {
+				if (values.indexOf(i) == -1) {
+					result.push(i)
+				}
+			}
+		return result
+	},
+	reverse: function(array) {
+		var res = []
+			for (var i = array.length - 1;i >= 0;i--) {
+				res.push(array[i])
+			}
+			return res
+	},
+	sortedIndex: function(array, value) {
+		for (var i = 0;i < array.length;i++) {
+			if (array[i] > value) {
+				return i
+			}
+		}
 	}
 }
