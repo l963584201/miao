@@ -275,5 +275,84 @@ var l963584201 = {
 				return i + 1
 			}
 		}
+	},
+	sortedIndexOf: function(array, value) {
+		for (var i = 0;i < array.length;i++) {
+			if (array[i] === value) {
+				return i
+			}
+		}
+		return -1
+	},
+	sortedLastIndex: function(array, value) {
+		for (var i = array.length - 1;i > 0;i--) {
+			if (array[i] === value) {
+				return i + 1
+			}
+		}
+		return -1
+	},
+	sortedLastIndexOf: function(array, value) {
+		for (var i = array.length - 1;i > 0;i--) {
+			if (array[i] === value) {
+				return i
+			}
+		}
+		return -1
+	},
+	sortedUniq: function(array){
+		var arr = []
+		for (var i = 0;i < array.length;i++) {
+			if (arr.indexOf(array[i]) == -1) {
+				arr.push(array[i])
+			}
+		}
+		return arr
+	},
+	uniq: function(array) {
+		var arr = []
+		for (var i = 0;i < array.length;i++) {
+			if (arr.indexOf(array[i]) == -1) {
+				arr.push(array[i])
+			}
+		}
+		return arr
+	},
+	sortedUniqBy: function(array, iteratee) {
+		var arr = []
+		var res = array.map(iteratee)
+		for (var i = 0;i < res.length;i++) {
+			if (arr.indexOf(res[i]) == -1) {
+				arr.push(res[i])
+			}
+		}
+		return arr
+	},
+	tail: function(array) {
+		var res = []
+		for (var i = 1;i < array.length;i++) {
+			res.push(array[i])
+		}
+		return res
+	},
+	take: function(array, n = 1) {
+		var res =[]
+		if (n > array.length) {
+			n = array.length
+		}
+		for (var i = 0;i < n;i++) {
+			res.push(array[i])
+		}
+		return res
+	},
+	takeRight: function(array, n = 1) {
+		var res =[]
+		if (n > array.length) {
+			n = array.length
+		}
+		for (var i = n;i > 0;i--) {
+			res.unshift(array.pop())
+		}
+		return res
 	}
 }
