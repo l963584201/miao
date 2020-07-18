@@ -1,18 +1,13 @@
 var l963584201 = {
-	isNull: function (val)
-	{
-		if (val === null)
-		{
+	isNull: function (val){
+		if (val === null){
 			return true
-		} else
-		{
+		} else{
 			return false
 		}
 	},
-	isNaN: function (val)
-	{
-		if (val !== val)
-		{
+	isNaN: function (val){
+		if (val !== val){
 			return true
 		} else{
 			return false
@@ -24,19 +19,15 @@ var l963584201 = {
 		arys.push(ary.slice(size,ary.length))
 		return arys
 	},
-	compact: function (array)
-		{
+	compact: function (array){
 			return array.filter(x => x>0)
 	},
-	concat: function (array, ...values)
-	{
+	concat: function (array, ...values){
 		return array.concat(...values)
 	},
-	difference: function (array,...values)
-	{
+	difference: function (array,...values){
 		let arrays = []
-		for (let x of values)
-		{
+		for (let x of values){
 			arrays = arrays.concat(x)
 		}
 		return array.filter((x) => !arrays.includes(x))
@@ -320,13 +311,15 @@ var l963584201 = {
 	},
 	sortedUniqBy: function(array, iteratee) {
 		var arr = []
+		var arrs = []
 		var res = array.map(iteratee)
 		for (var i = 0;i < res.length;i++) {
 			if (arr.indexOf(res[i]) == -1) {
 				arr.push(res[i])
+				arrs.push(array[i])
 			}
 		}
-		return arr
+		return arrs
 	},
 	tail: function(array) {
 		var res = []
@@ -354,5 +347,146 @@ var l963584201 = {
 			res.unshift(array.pop())
 		}
 		return res
-	}
+	},
+	union: function(...arrays){
+		var res = [].concat(...arrays)
+		var result = []
+		for (var i = 0;i < res.length;i++){
+			if (!result.includes(res[i])){
+				result.push(res[i])
+			}
+		}
+		return result
+	},
+	unionBy: function(...arrays,iteratee) {
+		var res = [].concat(...arrays)
+		var result = []
+		for (var i = 0;i < res.length;i++){
+			if (!result.includes(iteratee(res[i]))){
+				result.push(res[i])
+			}
+		}
+		return result
+	},
+
+
+
+
+
+
+
+	before:  function(n, func){
+		var i = 0
+		var res
+		return function(...args){
+			if (i  <= n) {
+				i++
+				res = func(...args)
+			}
+			return res
+		}
+	},
+	after: function (n, func) {
+		var i = 0
+		return function(...args){
+			if (i > n) {
+		 return func(...args)
+			}
+		}
+	},
+	ary: function(func, n = func.length) {
+		return function(...args) {
+			return func(...args.slice(0,n))
+		}
+	},
+	unary: function (func) {
+		return function(arg){
+			return func(arg)
+		}
+	},
+	flip: function (func) {
+		return function(...args){
+			return func(...args.reverse())
+		}
+	},
+	negate: function (predicate) {
+		return function (...args) {
+			return !predicate(...args)
+		}
+	},
+	spread:function (func) {
+		return function(ary) {
+			return func(...ary)
+			// return func.apply(null,ary)
+		}
+	},
+	bind: function (f, ...fixedArgs) {
+		return function bound(...args) {
+			var copy = fixedArgs.slice()
+			var j = 0
+			for (var i = 0;i < copy.length;i++) {
+				if (copy[i] === null) {
+					copy[i] = args[j++]
+				}
+			}
+			while (j < args.length) {
+				copy.push(args[j++])
+			}
+			return f(...copy)
+		}
+	},
+	filter: function (ary,predicate) {
+		var test = predicate
+		if (typeof predicate == 'string') {
+			test = it => it[predicate]
+		}else if (Array.isArray(predicate)){
+			obj = frompairs(predicate)
+		}else if (typeof predicate == 'object') {
+			text = (it) => {
+				for (var key in predicate) {
+					if (predicate[key] !== it[key]) {
+						return false
+					}
+				}
+				return true
+			}
+		}
+		var result = []
+		for (var i = 0;i < ary.length;i++) {
+			if (test(ary[i],i,ary)) {
+				result.push(ary[i])
+			}
+		}
+		return result
+	},
+	property:function (str) {
+
+		// return get.bind(null,_,prop)
+
+		return function(obj) {
+			return obj[str]
+		}
+	},
+	matches: function (target) {
+		return function(obj) {
+			for (var key in target) {
+				if (obj[key] !== target[key]) {
+					return false
+				}
+			}
+			return true
+		}
+	},
+	matchesProperty:function (ary) {
+		return matcher(frompairs(chunk(ary,2)))
+	},
+	get:function (obj, prop){
+		return obj[prop]
+	},
+	matches: function (src) {
+		return function(obj) {
+			return ismatch(obj,str)
+		}
+	},
+
 }
