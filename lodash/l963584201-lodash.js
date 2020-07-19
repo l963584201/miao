@@ -170,13 +170,6 @@ var l963584201 = {
 			return array[0]
 		}
 	},
-	indexOf: function(array, value, fromIndex = 0) {
-		for (var i = fromIndex;i <array.length;i++) {
-			if (array[i] == value) {
-				return i
-			}
-		}
-	},
 	initial: function(array) {
 		var result = []
 		for (var i = 0;i < array.length - 1;i++) {
