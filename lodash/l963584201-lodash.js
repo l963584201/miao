@@ -367,5 +367,5 @@ var l963584201 = {
 			}
 		}
 		return result
-	},
+	}
 }
