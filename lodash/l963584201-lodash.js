@@ -386,7 +386,7 @@ var l963584201 = {
 			return res
 		}
 	},
-	after: function (n, func) {
+	after: function(n, func) {
 		var i = 0
 		return function(...args){
 			if (i > n) {
@@ -399,28 +399,28 @@ var l963584201 = {
 			return func(...args.slice(0,n))
 		}
 	},
-	unary: function (func) {
+	unary: function(func) {
 		return function(arg){
 			return func(arg)
 		}
 	},
-	flip: function (func) {
+	flip: function(func) {
 		return function(...args){
 			return func(...args.reverse())
 		}
 	},
-	negate: function (predicate) {
+	negate: function(predicate) {
 		return function (...args) {
 			return !predicate(...args)
 		}
 	},
-	spread:function (func) {
+	spread: function(func) {
 		return function(ary) {
 			return func(...ary)
 			// return func.apply(null,ary)
 		}
 	},
-	bind: function (f, ...fixedArgs) {
+	bind: function(f, ...fixedArgs) {
 		return function bound(...args) {
 			var copy = fixedArgs.slice()
 			var j = 0
@@ -435,7 +435,7 @@ var l963584201 = {
 			return f(...copy)
 		}
 	},
-	filter: function (ary,predicate) {
+	filter: function(ary,predicate) {
 		var test = predicate
 		if (typeof predicate == 'string') {
 			test = it => it[predicate]
@@ -459,7 +459,7 @@ var l963584201 = {
 		}
 		return result
 	},
-	property:function (str) {
+	property: function(str) {
 
 		// return get.bind(null,_,prop)
 
@@ -467,7 +467,7 @@ var l963584201 = {
 			return obj[str]
 		}
 	},
-	matches: function (target) {
+	matches: function(target) {
 		return function(obj) {
 			for (var key in target) {
 				if (obj[key] !== target[key]) {
@@ -477,16 +477,16 @@ var l963584201 = {
 			return true
 		}
 	},
-	matchesProperty:function (ary) {
+	matchesProperty: function(ary) {
 		return matcher(frompairs(chunk(ary,2)))
 	},
-	get:function (obj, prop){
+	get: function(obj, prop){
 		return obj[prop]
 	},
 	matches: function (src) {
 		return function(obj) {
 			return ismatch(obj,str)
 		}
-	},
+	}
 
 }
