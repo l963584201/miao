@@ -469,11 +469,5 @@ var l963584201 = {
 	get: function(obj, prop){
 		return obj[prop]
 	},
-	matches: function (src) {
-		return function(obj) {
-			return ismatch(obj,str)
-		}
-	}
-
 
 }
